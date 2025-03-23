@@ -53,6 +53,30 @@ variable "subnet_address_prefixes" {
   description = "Subnet address prefixes"
 }
 
+variable "subnet1_name" {
+  type        = string
+  description = "Name of the first subnet"
+  default     = "subnet-1"
+}
+
+variable "subnet1_address_prefixes" {
+  type        = list(string)
+  description = "Address prefixes for the first subnet"
+  default     = ["10.0.1.0/24"]
+}
+
+variable "subnet2_name" {
+  type        = string
+  description = "Name of the second subnet"
+  default     = "subnet-2"
+}
+
+variable "subnet2_address_prefixes" {
+  type        = list(string)
+  description = "Address prefixes for the second subnet"
+  default     = ["10.0.2.0/24"]
+}
+
 variable "routes" {
   type = list(object({
     name           = string
